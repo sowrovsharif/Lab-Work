@@ -1,21 +1,14 @@
-//8.Write a program in c to find the maximum and the minimum element of an array.
 #include <stdio.h>
 int main()
 {
-
-  int arr[10],max,min;
-  printf("Enter Five Element\n");
-  for(int i=0;i<5;i++) scanf("%d",&arr[i]);
-  max=arr[0];
-  for(int i=1;i<5;i++){
-    if(max<arr[i]) max = arr[i];
-  }
-  min=arr[0];
-  for(int i=1;i<5;i++){
-    if(min>arr[i]) min = arr[i];
-  }
-
-  printf("Max Number Is : %d\n",max);
-  printf("Min Number Is : %d\n",min);
-
+	int a[5] = { 14, 5, 11, 9, 18 }, max = a[0], min = a[0];
+	for (int i = 0; i < 5; i++) printf("%d ", a[i]);
+	for (int i = 1; i < 5; i++)
+	{
+		if (max < a[i]) max = a[i];
+		if (min > a[i]) min = a[i];
+	}
+	printf("\nMaximum element: %d\n", max);
+	printf("Minimum element %d\n", min);
+	return 0;
 }
